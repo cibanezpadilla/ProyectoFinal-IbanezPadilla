@@ -1,0 +1,237 @@
+{
+  index: 0,
+  code: 11000,
+  keyPattern: { code: 1 },
+  keyValue: { code: 'abc1006' },
+  level: 'error',
+  timestamp: '2024-02-07T20:48:40.532Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  index: 0,
+  code: 11000,
+  keyPattern: { code: 1 },
+  keyValue: { code: 'abc11' },
+  level: 'error',
+  timestamp: '2024-02-07T21:31:21.869Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  code: 404,
+  name: 'PRODUCT_NOT_FOUND',
+  level: 'error',
+  timestamp: '2024-02-08T02:39:06.962Z'
+}
+{
+  code: 404,
+  name: 'PRODUCT_NOT_FOUND',
+  level: 'error',
+  timestamp: '2024-02-08T02:44:17.030Z'
+}
+{
+  code: 404,
+  name: 'PRODUCT_NOT_FOUND',
+  level: 'error',
+  timestamp: '2024-02-08T02:48:04.443Z'
+}
+{
+  code: 404,
+  name: 'PRODUCT_NOT_FOUND',
+  level: 'error',
+  timestamp: '2024-02-08T02:48:43.181Z'
+}
+{
+  code: 404,
+  name: 'PRODUCT_NOT_FOUND',
+  level: 'error',
+  timestamp: '2024-02-08T02:52:09.530Z'
+}
+{
+  code: 404,
+  name: 'PRODUCT_NOT_FOUND',
+  level: 'error',
+  timestamp: '2024-02-08T02:53:37.849Z'
+}
+{
+  code: 404,
+  name: 'PRODUCT_NOT_FOUND',
+  level: 'error',
+  timestamp: '2024-02-08T03:00:43.950Z'
+}
+{
+  code: 404,
+  name: 'PRODUCT_NOT_FOUND',
+  level: 'error',
+  timestamp: '2024-02-08T03:04:27.847Z'
+}
+{
+  code: 404,
+  name: 'PRODUCT_NOT_FOUND',
+  level: 'error',
+  timestamp: '2024-02-08T03:04:31.288Z'
+}
+{
+  code: 404,
+  name: 'PRODUCT_NOT_FOUND',
+  level: 'error',
+  timestamp: '2024-02-21T17:17:34.121Z'
+}
+{
+  code: 404,
+  name: 'PRODUCT_NOT_FOUND',
+  level: 'error',
+  timestamp: '2024-02-21T17:17:35.622Z'
+}
+{ level: 'error', timestamp: '2024-03-06T02:53:15.031Z' }
+{ level: 'error', timestamp: '2024-03-06T03:09:26.198Z' }
+{ level: 'error', timestamp: '2024-03-07T00:47:31.505Z' }
+{ level: 'error', timestamp: '2024-03-07T00:50:02.734Z' }
+{ level: 'error', timestamp: '2024-03-07T00:50:20.191Z' }
+{ level: 'error', timestamp: '2024-03-07T00:50:35.714Z' }
+{ level: 'error', timestamp: '2024-03-07T00:51:05.321Z' }
+{ level: 'error', timestamp: '2024-03-07T00:51:54.022Z' }
+{ level: 'error', timestamp: '2024-03-07T00:53:39.151Z' }
+{ level: 'error', timestamp: '2024-03-07T00:54:18.066Z' }
+{ level: 'error', timestamp: '2024-03-07T00:54:50.494Z' }
+{ level: 'error', timestamp: '2024-03-07T00:55:36.031Z' }
+{
+  code: 404,
+  name: 'USER_NOT_FOUND',
+  level: 'error',
+  timestamp: '2024-03-08T02:06:51.707Z'
+}
+{
+  code: 404,
+  name: 'USER_NOT_FOUND',
+  level: 'error',
+  timestamp: '2024-03-08T02:07:11.455Z'
+}
+{
+  code: 404,
+  name: 'OID_INVALID_FORMAT',
+  level: 'error',
+  timestamp: '2024-03-09T04:40:26.301Z'
+}
+{
+  code: 404,
+  name: 'OID_INVALID_FORMAT',
+  level: 'error',
+  timestamp: '2024-03-09T04:40:39.405Z'
+}
+{
+  code: 404,
+  name: 'OID_INVALID_FORMAT',
+  level: 'error',
+  timestamp: '2024-03-09T04:44:05.073Z'
+}
+{
+  code: 404,
+  name: 'OID_INVALID_FORMAT',
+  level: 'error',
+  timestamp: '2024-03-09T04:49:27.625Z'
+}
+{
+  code: 404,
+  name: 'OID_INVALID_FORMAT',
+  level: 'error',
+  timestamp: '2024-03-09T04:49:37.097Z'
+}
+{
+  code: 404,
+  name: 'OID_INVALID_FORMAT',
+  level: 'error',
+  timestamp: '2024-03-09T04:53:21.686Z'
+}
+{
+  code: 404,
+  name: 'OID_INVALID_FORMAT',
+  level: 'error',
+  timestamp: '2024-03-09T04:56:03.729Z'
+}
+{
+  code: 404,
+  name: 'OID_INVALID_FORMAT',
+  level: 'error',
+  timestamp: '2024-03-09T04:57:57.438Z'
+}
+{
+  code: 404,
+  name: 'OID_INVALID_FORMAT',
+  level: 'error',
+  timestamp: '2024-03-09T05:03:23.481Z'
+}
+{
+  code: 404,
+  name: 'OID_INVALID_FORMAT',
+  level: 'error',
+  timestamp: '2024-03-09T05:04:46.640Z'
+}
+{
+  code: 404,
+  name: 'USER_NOT_FOUND',
+  level: 'error',
+  timestamp: '2024-03-09T05:28:15.491Z'
+}
+{
+  code: 404,
+  name: 'OID_INVALID_FORMAT',
+  level: 'error',
+  timestamp: '2024-03-10T19:42:59.060Z'
+}
+{
+  code: 404,
+  name: 'OID_INVALID_FORMAT',
+  level: 'error',
+  timestamp: '2024-03-10T19:47:13.408Z'
+}
+{
+  code: 404,
+  name: 'OID_INVALID_FORMAT',
+  level: 'error',
+  timestamp: '2024-03-10T19:49:57.968Z'
+}
+{ level: 'error', timestamp: '2024-03-10T22:13:21.118Z' }
+{ level: 'error', timestamp: '2024-03-10T22:13:41.934Z' }
+{
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'error',
+  timestamp: '2024-03-11T00:06:07.097Z'
+}
+{
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'error',
+  timestamp: '2024-03-11T00:08:20.923Z'
+}
+{
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'error',
+  timestamp: '2024-03-11T00:17:34.829Z'
+}
+{
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'error',
+  timestamp: '2024-03-11T00:19:42.583Z'
+}
+{
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'error',
+  timestamp: '2024-03-11T00:32:35.400Z'
+}
+{
+  index: 0,
+  code: 11000,
+  keyPattern: { code: 1 },
+  keyValue: { code: 'abc3' },
+  level: 'error',
+  timestamp: '2024-03-12T21:24:20.365Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  index: 0,
+  code: 11000,
+  keyPattern: { code: 1 },
+  keyValue: { code: 'abc3' },
+  level: 'error',
+  timestamp: '2024-03-12T21:25:45.746Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}

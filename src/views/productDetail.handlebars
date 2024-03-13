@@ -1,0 +1,26 @@
+<h2 id="user_welcome">Welcome, {{user.name}}</h2>
+<p id="user-email">Email: {{user.email}}</p>
+<p id="user-role">User role: {{user.role}}</p>
+
+<div class="contenedor-botones">
+        <button id="cart_button"><a href="/cart/{{user.cart}}">Your cart</a></button>    
+        <button id="signout_button"><a href="/api/sessions/signout">SIGN OUT</a></button>
+</div>
+
+<h2>PRODUCT DETAIL</h2>
+
+<div id="info">
+    <h3>{{product.title}}</h3>    
+    <p>ID: {{product._id}}</p>
+    <p>Status: {{product.status}}</p>
+    <p>Description: {{product.description}}</p>
+    <p>Price: ${{product.price}}</p>
+    <p>Code: {{product.code}}</p>
+    <p>Stock: {{product.stock}}</p>
+    <p id="category" >Category: {{product.category}}</p>    
+    <button id="button_addToCart" data-user-cart="{{user.cart}}" data-prod-id="{{product._id}}">Add To Cart</button>
+</div>
+<br>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/prodDetail.js"></script>
+

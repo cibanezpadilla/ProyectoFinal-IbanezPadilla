@@ -1,0 +1,17 @@
+<h2 id="user_welcome">Welcome, {{user.name}}</h2>
+<p id="user-email">Email: {{user.email}}</p>
+<p id="user-role">User role: {{user.role}}</p>
+
+<div class="contenedor-botones">
+        <button id="cart_button"><a href="/cart/{{user.cart}}">Your cart</a></button>    
+        <button id="signout_button"><a href="/api/sessions/signout">SIGN OUT</a></button>
+</div>
+
+<div class="container-info">
+        <h2>SUCCESSFUL PURCHASE</h2>
+        <p><span class="bold">Ticket Code: </span>{{code}}</p>
+        <p><span class="bold">Date: </span>{{parsedDate}}</p>
+        <p><span class="bold">Time: </span>{{GMTtime}}</p>
+        <p><span class="bold">Amount: </span>${{amount}}</p>
+</div>
+

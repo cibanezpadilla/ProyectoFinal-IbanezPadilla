@@ -1,0 +1,15 @@
+<h2 id="user_welcome">Welcome, {{user.name}}</h2>
+<p id="user-email">Email: {{user.email}}</p>
+<p id="user-role">User role: {{user.role}}</p>
+
+<h2 id="documents_title">UPLOAD YOUR DOCUMENTS</h2>
+<div id="div_form">
+    <form action="/api/users/{{id}}/documents" 
+ enctype="multipart/form-data" method="post">
+    DNI:<input id="form_line" type="file" name="dni" id="dni">
+    ADDRESS:<input id="form_line" type="file" name="address" id="address">
+    BANK:<input id="form_line" type="file" name="bank" id="bank">
+    <input id="submit_button" type="submit" value="Send">
+</div>
+
+</form>

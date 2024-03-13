@@ -1,0 +1,27 @@
+<h2 id="signup_title">Create your account</h2>
+<div id="signup-redirect-login">
+    <p>Have an account?</p>
+    <a href="/login">Log in now</a>
+</div>
+
+
+
+<p id="local-signup_tittle">Sign up with email and password</p>
+<div id="div_form">
+    <form action="/api/sessions/signup" method="post">
+        First Name: <input id="form_line" type="text" name="first_name" id="first_name">
+        <br>
+        Last Name: <input id="form_line" type="text" name="last_name" id="last_name">
+        <br>
+        Email: <input id="form_line" type="email" name="email" id="email">
+        <br>
+        Password: <input id="form_line" type="password" name="password" id="password">
+        <br>
+        Age: <input id="form_line" type="number" name="age" id="age">
+        <br>        
+        <input id="signup_button" type="submit" value="Sign Up">
+    </form>
+</div>
+
+<button id="github_button" onclick="location.href='/api/sessions/auth/github'">GITHUB</button>
+

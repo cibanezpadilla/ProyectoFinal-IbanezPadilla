@@ -1,0 +1,14 @@
+<h2 id="reset_title">Reset your password</h2>
+<div id="reset-div_form">
+    <form action="/api/sessions/restart/{{id}}" method="post">    
+    Password: <input id="form_line" type="password" name="pass" id="pass">    
+    <br>
+    Repeat password: <input id="form_line" type="password" name="repeat" id="repeat">    
+    <br>
+    {{#if errorMessage}}    
+        <p id="login_failure-message">{{errorMessage}}</p>
+    {{/if}}
+    <input id="reset_button" type="submit" value="Reset">
+    </form>
+
+</div>

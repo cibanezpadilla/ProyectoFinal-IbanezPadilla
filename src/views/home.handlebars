@@ -1,0 +1,56 @@
+
+<h2 id="user_welcome">Welcome, {{user.name}}</h2>
+<p id="user-email">Email: {{user.email}}</p>
+<p id="user-role">User role: {{user.role}}</p>
+
+
+
+
+{{#if isAdmin}}    
+    <button id="user-management"><a href="/users">USER MANAGEMENT</a></button>    
+    <div class="contenedor-botones">
+        <button id="signout_button"><a href="/api/sessions/signout">SIGN OUT</a></button>
+    </div>
+{{else}}
+    <div class="contenedor-botones">
+        <button id="documents_button"><a href="/documents">Upload your documents</a></button>
+        <button id="cart_button"><a href="/cart/{{user.cart}}">Your cart</a></button>    
+        <button id="signout_button"><a href="/api/sessions/signout">SIGN OUT</a></button>
+    </div>
+    
+    <h2 id="catalogue_title">CATALOGUE</h2>
+
+    <div id="contenedor">
+        {{#each productList}}
+            <div id="card"  style="border-style: solid;border-color:rgb(201, 201, 201)">
+                <img id="image" src="{{thumbnail}}" alt="">
+                <h3 id="prod_title">{{title}}</h3>                    
+                <p>Description: {{description}}</p>
+                <p id="prod_info">Price: ${{price}}</p>                    
+                <p id="prod_info">Category: {{category}}</p>
+                <a id="button_verMas" href="/home/{{_id}}">More details</a>
+            </div>         
+        {{/each}}   
+    </div>
+    <div id="pagination_buttons">
+            {{#if prevPage}}
+                {{#if category}}        
+                    <a id="pagination_button" href="/home/?limit={{limit}}&page={{prevPage}}&order={{order}}&category={{category}}">Prev Page</a>
+                {{else}}
+                    <a id="pagination_button" href="/home/?limit={{limit}}&page={{prevPage}}&order={{order}}">Prev Page</a>
+                {{/if}}
+            {{else}}
+                <p></p>
+            {{/if}}    
+            <p id="pagination_number">Page {{page}}</p>
+            {{#if nextPage}}
+                {{#if category}}
+                    <a id="pagination_button" href="/home/?limit={{limit}}&page={{nextPage}}&order={{order}}&category={{category}}">Next Page</a>
+                {{else}}
+                    <a id="pagination_button" href="/home/?limit={{limit}}&page={{nextPage}}&order={{order}}">Next Page</a>
+                {{/if}}   
+            {{else}}
+                <p></p>
+            {{/if}}    
+    </div>    
+{{/if}}

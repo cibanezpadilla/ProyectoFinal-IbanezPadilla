@@ -1,0 +1,332 @@
+paths:
+    /api/products:
+        get:
+            summary: Get all products
+            tags:
+                - Products
+            parameters: 
+                - name: limit
+                  in: query
+                  description: Number of products shown per page
+                - name: page
+                  in: query
+                  description: Current page number
+                - name: order
+                  in: query
+                  description: Sorting by price
+                  options: 
+                    "asc":
+                      description: Sorting in ascending order
+                    "des":
+                      description: Sorting in descending order
+                - name: title
+                  in: query
+                  description: Filter by title
+                - name: price
+                  in: query
+                  description: Filter by price
+                - name: code
+                  in: query
+                  description: Filter by code
+                - name: stock
+                  in: query
+                  description: Filter by stock
+                - name: category
+                  in: query
+                  description: Filter by category
+                  schema:
+                      $ref: "#components/schemas/ProductCategories"
+            responses:
+                "200":
+                    description: All products
+                    content:  
+                        application/json: 
+                            schemas:
+                                $ref: "#components/responses/getAllProducts" 
+                            example:
+                                __id: 653ef1861837113bd7272f87                                 
+                                status: true                           
+                                title: ozzy dress                              
+                                description: printed dress                                
+                                price: 400                               
+                                code: abc1276                           
+                                stock: 23                             
+                                category: dresses                                   
+                                thumbnail: https://cdn-icons-png.flaticon.com/512/1363/1363124.png
+                                    
+                "500":
+                    description: Server error    
+        post:
+            summary: Create product
+            tags:
+                - Products
+            requestBody:
+                content:
+                    application/json: 
+                            schemas:
+                                $ref: "#components/requestBodies/createProduct"
+                            example:
+                                __id: 653ef1861837113bd7272f87                                 
+                                status: true                           
+                                title: ozzy dress                              
+                                description: printed dress                                
+                                price: 400                               
+                                code: abc1276                           
+                                stock: 23                             
+                                category: dresses                                   
+                                thumbnail: https://cdn-icons-png.flaticon.com/512/1363/1363124.png
+            responses:
+                "200":
+                    description: Product created
+                    content: 
+                        application/json: 
+                            schemas:
+                                $ref: "#components/schemas/Product" 
+                            example:
+                                __id: 653ef1861837113bd7272f87                                 
+                                status: true                           
+                                title: ozzy dress                              
+                                description: printed dress                                
+                                price: 400                               
+                                code: abc1276                           
+                                stock: 23                             
+                                category: dresses                                   
+                                thumbnail: https://cdn-icons-png.flaticon.com/512/1363/1363124.png
+                "500":
+                    description: Server error                
+                "400":
+                    descriptions: Some data is missing
+
+
+
+    /api/products/{id}:    
+        get:
+            summary: Get product by id
+            tags:
+                - Products
+            parameters: 
+                - name: id
+                  in: path
+                  description: product identifier
+            responses:
+                "200":
+                    description: One product found
+                    content: 
+                        application/json: 
+                            schemas:
+                                $ref: "#components/schemas/Product" 
+                            example:
+                                __id: 653ef1861837113bd7272f87                                 
+                                status: true                           
+                                title: ozzy dress                              
+                                description: printed dress                                
+                                price: 400                               
+                                code: abc1276                           
+                                stock: 23                             
+                                category: dresses                                   
+                                thumbnail: https://cdn-icons-png.flaticon.com/512/1363/1363124.png
+                "500":
+                    description: Server error
+                "404":
+                    descriptions: Product not found with the id provided
+                                  Invalid Mongoose ObjectID format
+
+        delete:
+            summary: Delete product by id
+            tags:
+                - Products
+            parameters: 
+                - name: id
+                  in: path
+                  description: product identifier            
+            responses:
+                "200":
+                    description: One product updated
+                    content: 
+                        application/json: 
+                            schemas:
+                                $ref: "#components/schemas/Product"
+                            example:
+                                __id: 653ef1861837113bd7272f87                                 
+                                status: true                           
+                                title: ozzy dress                              
+                                description: printed dress                                
+                                price: 400                               
+                                code: abc1276                           
+                                stock: 23                             
+                                category: dresses                                   
+                                thumbnail: https://cdn-icons-png.flaticon.com/512/1363/1363124.png
+                "500":
+                    description: Server error
+                "404":
+                    descriptions: Product not found with the id provided
+                                  Invalid Mongoose ObjectID format
+                
+
+        put:
+            summary: Update product by id
+            tags:
+                - Products
+            parameters: 
+                - name: id
+                  in: path
+                  description: product identifier
+            requestBody:
+                content:
+                    application/json: 
+                            schemas:
+                                $ref: "#components/requestBodies/updateProduct"
+                            example:                                                               
+                                status: true                           
+                                title: ozzy dress                              
+                                description: printed dress                                
+                                price: 400                               
+                                code: abc1276                           
+                                stock: 23                             
+                                category: dresses                                   
+                                thumbnail: https://cdn-icons-png.flaticon.com/512/1363/1363124.png
+            responses:
+                "200":
+                    description: One product updated
+                    content: 
+                        application/json: 
+                            schemas:
+                                $ref: "#components/schemas/Product"
+                            example:
+                                __id: 653ef1861837113bd7272f87                                 
+                                status: true                           
+                                title: ozzy dress                              
+                                description: printed dress                                
+                                price: 400                               
+                                code: abc1276                           
+                                stock: 23                             
+                                category: dresses                                   
+                                thumbnail: https://cdn-icons-png.flaticon.com/512/1363/1363124.png
+                "500":
+                    description: Server error
+                "404":
+                    descriptions: Product not found with the id provided
+                                  Invalid Mongoose ObjectID format
+                
+
+
+
+components:
+    schemas: 
+        Product: 
+            type: object
+            properties:
+                __id: 
+                    type: string
+                status:
+                    type: boolean
+                title:
+                    type: string
+                description:
+                    type: string
+                price:
+                    type: number
+                code:
+                    type: number
+                stock:
+                    type: number
+                category:
+                    type: string
+                thumbnail:
+                    type: string
+            example:
+                __id: 653ef1861837113bd7272f87                                 
+                status: true                           
+                title: ozzy dress                              
+                description: printed dress                                
+                price: 400                               
+                code: abc1276                           
+                stock: 23                             
+                category: dresses                                   
+                thumbnail: https://cdn-icons-png.flaticon.com/512/1363/1363124.png 
+
+        ProductCategories:
+            type: string
+            enum: ["skirts", "dresses", "tops", "tshirts", "jackets", "blazers", "pants", "shirts"]
+            description: Product category      
+                  
+
+    requestBodies:
+        createProduct:
+            type: object
+            properties:                
+                status:
+                    type: boolean
+                title:
+                    type: string
+                description:
+                    type: string
+                price:
+                    type: number
+                code:
+                    type: number
+                stock:
+                    type: number
+                category:
+                    type: string
+                thumbnail:
+                    type: string
+
+        updateProduct:
+            type: object
+            properties:                
+                status:
+                    type: boolean
+                title:
+                    type: string
+                description:
+                    type: string
+                price:
+                    type: number
+                code:
+                    type: number
+                stock:
+                    type: number
+                category:
+                    type: string
+                thumbnail:
+                    type: string
+    responses:
+        getAllProducts:
+            type: object
+            properties:
+                info:
+                    type: object
+                    properties:
+                        status:
+                            type: string
+                        count:
+                            type: number
+                        totalPages:
+                            type: number
+                        prevPage:
+                            type: number
+                        nextPage:
+                            type: number
+                        page:
+                            type: number
+                        hasPrevPage:
+                            type: boolean
+                        hasNextPage:
+                            type: boolean
+                        nextLink:
+                            type: string
+                        prevLink:
+                            type: string
+                payload: 
+                    type: array
+                    items:
+                        $ref: '#/components/schemas/Product'
+
+
+                      
+    
+
+
+
+

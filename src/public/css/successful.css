@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* padding-inline: 2rem; */    
+  }
+
+  #logo{
+    background-color: black;
+    padding: 3rem;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.7cm;
+    font-weight: 200;
+}
+
+#user-rol{
+    margin-top: 2rem;
+    text-align: center;
+}
+#user_welcome{    
+    text-align: center;
+}
+
+
+
+#user-email{
+    text-align: center;
+}
+
+#user-role{
+    text-align: center;
+}
+
+.contenedor-botones{    
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;    
+    margin-right: 2.5rem;
+    gap: 2rem;
+}
+
+
+#cart_button{ 
+    margin-top: 1rem;
+    background-color: black;
+    color: white;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+#cart_button a {
+    text-decoration: none;
+    color: white;
+}
+
+
+#signout_button{    
+    margin-top: 1rem;
+    background-color: black;
+    color: white;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+#signout_button a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.container-info{
+    margin-bottom: 5rem;
+}
+
+
+h2{    
+    padding-top: 4rem;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.bold{
+    font-weight: bold;
+}
